@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indents in CSS</title>
 
-    <link rel="stylesheet" href="fonts.css">
+    <link rel="preload" href="/assets/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,32 +17,28 @@
 
     <article class="article">
 
-        <section class="prelude">
-            <div class="container">
-                <h1 class="prelude__title">Отступы в вёрстке: margin и padding</h1>
+        <h1 class="article__title">Отступы в вёрстке: margin и padding</h1>
 
-                <p class="prelude__subtitle">В этой статье я рассмотрю самые популярные "стандартные" решения для
-                    сохранения
-                    смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации
-                    отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют
-                    легко
-                    вносить изменения в любую его часть. При этом другие части кода продолжат нормально работать.
-                </p>
-                <p class="prelude__subtitle">Как это часто бывает, знание базовых принципов поможет проявить гибкость и
-                    выйти за
-                    их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для
-                    более
-                    опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.
-                </p>
-            </div>
-        </section>
+        <div class="container prelude">
 
-        <section class="menu">
-            <nav class="menu__navigation">
+            <p class="prelude__subtitle">В этой статье я рассмотрю самые популярные "стандартные" решения для
+                сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах
+                организации отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно,
+                позволяют легко вносить изменения в любую его часть. При этом другие части кода продолжат нормально
+                работать.
+            </p>
+            <p class="prelude__subtitle">Как это часто бывает, знание базовых принципов поможет проявить гибкость и
+                выйти за их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и
+                для более опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.
+            </p>
+        </div>
+
+        <section class="menu interval">
+            <div class="menu__navigation wrapper">
                 <div class="menu__container container">
-                    <!-- <nav class="article__content content"> -->
-                    <h2 class="menu__title">Содержание:</h2>
-                    <ol class="menu__list">
+                    <h2 class="menu__title heading">Содержание:</h2>
+
+                    <ol class="menu__list list">
                         <li class="menu-item item">
                             <a href="#sequence" class="item__link">Отступ задается от предыдущего элемента к
                                 следующему</a>
@@ -54,22 +53,19 @@
                                 обнуляется</a>
                         </li>
                     </ol>
-                    <!-- </nav> -->
                 </div>
-            </nav>
+            </div>
         </section>
 
-        <section class="sequence" id="sequence">
+        <section class="sequence interval" id="sequence">
             <div class="container">
                 <h2 class="sequence__title title"> Отступ задается от предыдущего элемента к следующему: от первого ко
                     второму, сверху вниз, слева направо. </h2>
 
 
                 <div class="sequence__content">
-                    <figure class="sequence__picture sequence__picture-left">
-                        <img class="sequence__picture-image" src="assets/img/cats.png" width="560" height="415"
-                            alt="проверка кодировки в VS Code">
-                    </figure>
+                    <img class="sequence__picture sequence__picture-left" src="assets/img/cats.png" width="560"
+                        height="415" alt="проверка кодировки в VS Code">
 
                     <div class="sequence__text">
                         <p class="sequence__text-content"><strong>ВАЖНО:</strong> <em>margin</em> всегда задают от
@@ -88,10 +84,8 @@
                 </div>
 
                 <div class="sequence__content">
-                    <figure class="sequence__picture sequence__picture-right">
-                        <img class="esequence__picture-image" src="assets/img/cat.png" width="560" height="279"
-                            alt="проверка кодировки в VS Code">
-                    </figure>
+                    <img class="sequence__picture sequence__picture-right" src="assets/img/cat.png" width="560"
+                        height="279" alt="проверка кодировки в VS Code">
 
                     <div class="sequence__text sequence__text-right">
                         <p class="sequence__text-content">Отступ внутри блока сверху или слева реализуется через
@@ -108,7 +102,7 @@
             </div>
         </section>
 
-        <section class="indent" id="indent">
+        <section class="indent interval" id="indent">
             <div class="container">
                 <h2 class="indent__title title">Отступ задается последнему возможному элементу в DOM-дереве</h2>
                 <p class="indent__text">Вообще, <em>margin</em> задают исключительно между соседними элементами
@@ -116,23 +110,17 @@
                     примера, посмотрите на
                     этот список:</p>
 
-                <figure class="indent__picture">
-                    <img class="indent__picture-image" src="assets/img/code recipe.png" width="1080" height="537"
-                        alt="проверка кодировки в VScvzxvz Code">
-                </figure>
+                <img class="indent__picture-image" src="assets/img/code_recipe.png" width="1080" height="537"
+                    alt="проверка кодировки в VS Code">
 
-                <figure class="indent__picture">
-                    <img class="indent__picture-image recipes" src="assets/img/recipes.png" width="600" height="450"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="indent__picture-image recipes" src="assets/img/recipes.png" width="600" height="450"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="indent__text">Отступ делают за счёт соседних элементов, а не дочерних:</p>
 
                 <div class="indent__content">
-                    <figure class="indent__content-picture usefuls">
-                        <img class="usefuls__image" src="assets/img/usefuls.png" width="1080" height="427"
-                            alt="проверка кодировки в VS Code">
-                    </figure>
+                    <img class="indent__picture-image" src="assets/img/usefuls.png" width="1080" height="427"
+                        alt="проверка кодировки в VS Code">
 
                     <p class="indent__content-text"><strong>ВАЖНО</strong>: здесь <em>.list-item</em> — последний
                         возможный элемент в котором мы
@@ -147,10 +135,8 @@
                 <p class="indent__text">Предыдущий пример был достаточно простым, но бывает вложенность значительно
                     больше.</p>
 
-                <figure class="indent__picture">
-                    <img class="indent__picture-image" src="assets/img/ghbvth.png" width="964" height="164"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="indent__picture-image" src="assets/img/ghbvth.png" width="964" height="164"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="indent__text">В случае с заголовком, если ему необходим отступ сверху, последним элементом
                     будет <em>&lt;section&gt;</em>. Именно для него задается <em>padding-top</em>, а не
@@ -158,10 +144,8 @@
                     умолчанию необходимо
                     обнулить.</p>
 
-                <figure class="indent__picture">
-                    <img class="indent__picture-image" src="assets/img/important title.png" width="1022" height="504"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="indent__picture-image" src="assets/img/important_title.png" width="1022" height="504"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="indent__text">Это необходимо для более простого поиска отступов в будущем — для вас или
                     того, кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом
@@ -170,7 +154,7 @@
             </div>
         </section>
 
-        <section class="reset" id="reset">
+        <section class="reset interval" id="reset">
             <div class="container">
                 <h2 class="reset__title title">Для последнего элемента группы отступ всегда обнуляется</h2>
 
@@ -178,72 +162,60 @@
                 <p class="reset__text">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока
                     расстояние такое же.</p>
 
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/recipe.png" width="600" height="600"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture" src="assets/img/recipe.png" width="600" height="600"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="reset__text">В соответствии со вторым принципом: последний margin обнуляется, а нижний отступ
                     задаётся через padding для section. Я чаще всего задаю padding для секции с обоих сторон, если
                     расстояние между секциями 100px задаю секциям padding-top:50px и padding-bottom:50px.</p>
 
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/recip l.png" width="600" height="607"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture" src="assets/img/recip_l.png" width="600" height="607"
+                    alt="проверка кодировки в VS Code">
 
-                <figure class="reset__picture reset__picture-section">
-                    <img class="reset__picture-image" src="assets/img/section.png" width="1080" height="528"
-                        alt="проверка кодировки в VS Code">
-                </figure>
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/section2.png" width="1080" height="530"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture" src="assets/img/section.png" width="1080" height="528"
+                    alt="проверка кодировки в VS Code">
+
+                <img class="reset__picture" src="assets/img/section2.png" width="1080" height="530"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="reset__text">Для большего понимания рассмотрим другой пример, который часто встречается на
                     практике:</p>
 
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/menu.png" width="1080" height="88"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture" src="assets/img/menu.png" width="1080" height="88"
+                    alt="проверка кодировки в VS Code">
 
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/header.png" width="806" height="475"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture" src="assets/img/header.png" width="806" height="475"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="reset__text">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска.
                     Отступы между пунктами меню задаются так:</p>
 
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/indent.png" width="317" height="110"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture" src="assets/img/indent.png" width="317" height="110"
+                    alt="проверка кодировки в VS Code">
 
                 <p class="reset__text">Советую использовать псевдоклассы :last-child чаще других, например так:</p>
 
-                <figure class="reset__picture">
-                    <img class="reset__picture-image" src="assets/img/indent pcedo.png" width="500" height="383"
-                        alt="проверка кодировки в VS Code">
-                </figure>
+                <img class="reset__picture reset__picture-image" src="assets/img/indent_pcedo.png" width="500"
+                    height="383" alt="проверка кодировки в VS Code">
             </div>
         </section>
 
-        <section class="result">
-            <div class="result__wrapper">
-                <div class="result__container">
-                    <h2 class="result__title">Подытожим:</h2>
+        <section class="result interval">
+            <div class="result__wrapper wrapper">
+                <div class="result__container container">
+                    <h2 class="result__title heading">Подытожим:</h2>
 
-                    <ul class="result__list">
-                        <li class="result__list-item">&mdash; отступы задаём от предыдущего элемента к следующему</li>
-                        <li class="result__list-item">&mdash; используем только margin-right и margin-bottom</li>
-                        <li class="result__list-item">&mdash; внешние отступы задаются только между соседями</li>
-                        <li class="result__list-item">&mdash; внутренний отступ задаём самому верхнему элементу в дом
+                    <ul class="result__list list">
+                        <li class="result__list-item item">&mdash; отступы задаём от предыдущего элемента к следующему
+                        </li>
+                        <li class="result__list-item item">&mdash; используем только margin-right и margin-bottom</li>
+                        <li class="result__list-item item">&mdash; внешние отступы задаются только между соседями</li>
+                        <li class="result__list-item item">&mdash; внутренний отступ задаём самому верхнему элементу в
+                            дом
                             дереве
                         </li>
-                        <li class="result__list-item">&mdash; последнему элементу группы отступ всегда обнуляем</li>
+                        <li class="result__list-item item">&mdash; последнему элементу группы отступ всегда обнуляем
+                        </li>
                     </ul>
 
                     <p class="result__conclusion">Конечно бывают исключения. Ведь макеты бывают различной сложности.
