@@ -129,7 +129,7 @@ fieldset {
 }
 
 .wrapper {
-  padding: 25px 30px;
+  padding: 25px 20px;
   max-width: 1180px;
   margin: 0 auto;
   border-radius: 10px;
@@ -140,15 +140,17 @@ fieldset {
   font-size: 44px;
   font-weight: 700;
   line-height: 52.8px;
+  padding-left: 15px;
   margin-bottom: 20px;
 }
 
 .list {
+  padding-left: 15px;
   transition: all 0.5s linear;
 }
 
 .menu__list {
-  padding-left: 30px;
+  padding-left: 35px;
   color: #02535f;
 }
 
@@ -176,10 +178,11 @@ fieldset {
 }
 
 .result__list-item:last-child {
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .result__conclusion {
+  padding-left: 15px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -243,7 +246,6 @@ fieldset {
 
 .indent__content {
   border: 1px solid #000000;
-  padding-bottom: 15px;
   margin-bottom: 30px;
 }
 
@@ -252,12 +254,9 @@ fieldset {
 }
 
 .indent__content-text {
-  max-width: 1020px;
-  margin: 0 auto;
-  font-size: 20px;
-  font-weight: 400;
   line-height: 24px;
   color: #5e5e5e;
+  padding: 15px 30px;
 }
 
 /* RESET */
