@@ -129,28 +129,26 @@ fieldset {
 }
 
 .wrapper {
-  padding: 25px 20px;
+  padding: 25px 60px;
   max-width: 1180px;
   margin: 0 auto;
   border-radius: 10px;
   background-color: #f1f1f1;
 }
 
-.heading {
+.wrapper__title {
   font-size: 44px;
   font-weight: 700;
   line-height: 52.8px;
-  padding-left: 15px;
   margin-bottom: 20px;
 }
 
 .list {
-  padding-left: 15px;
   transition: all 0.5s linear;
 }
 
 .menu__list {
-  padding-left: 35px;
+  padding-left: 30px;
   color: #02535f;
 }
 
@@ -182,7 +180,6 @@ fieldset {
 }
 
 .result__conclusion {
-  padding-left: 15px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
